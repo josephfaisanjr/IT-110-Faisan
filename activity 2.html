@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Practical Activity - Faisan, Joseph</title>
+</head>
+<body>
+
+<h1 id="main-heading">HTML Practical Application Activity</h1>
+<p>By Joseph Faisan</p>
+
+<!-- ===== 1. IMAGES ===== -->
+<h2 id="images-section">Images</h2>
+
+<img src="IMAGE/image 5.png" alt="Tabby cat with one eye winking and mouth slightly open" width="250">
+<img src="IMAGE/image 6.png" alt="Wet gray cat looking upward with a surprised expression" height="180">
+
+<figure>
+  <img src="IMAGE/image 10.png" alt="Silhouette of a man and woman holding hands under a starry purple sky" width="250">
+  <figcaption>Silhouette of a couple holding hands under a starry night sky.</figcaption>
+</figure>
+
+<!-- ===== 2. HYPERLINKS ===== -->
+<h2 id="hyperlinks-section">Hyperlinks</h2>
+
+<p><a href="activity 1.html">Internal link: view Activity 1</a></p>
+
+<p><a href="https://www.w3schools.com/html/" target="_blank">Learn more about HTML on W3Schools</a></p>
+
+<p><a href="mailto:joseph.faisan@carsu.edu.ph">Email link: contact me</a></p>
+
+<a href="#multimedia-section">Jump to Multimedia section</a>
+
+<!-- ===== 3. MULTIMEDIA ===== -->
+<h2 id="multimedia-section">Multimedia</h2>
+
+<audio controls>
+  <source src="AUDIO/pahinga.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+
+<video controls width="300">
+  <source src="VIDEO/vid 1.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+
+<!-- ===== 4. USEFUL TAGS ===== -->
+<h2 id="useful-tags-section">Useful Tags</h2>
+
+<!-- I used blockquote to show a quote -->
+<blockquote>"The Web is for everyone." - Tim Berners-Lee</blockquote>
+
+<!-- I used abbr to explain what HTML stands for -->
+<p><abbr title="HyperText Markup Language">HTML</abbr> is used to create web pages.</p>
+
+<!-- I used mark to highlight an important word -->
+<p>A <mark>Pull Request</mark> is used to submit changes for review.</p>
+<!-- ===== 5. HTML DOM ===== -->
+<h2 id="dom-section">HTML DOM</h2>
+
+<p>The DOM represents this page as a tree of nested elements, where tags inside other tags become their children.</p>
+
+<img src="IMAGE/dom tree.png" alt="Screenshot of the DOM tree in DevTools" width="1500">
+
+<!--
+Looking at my DOM tree, the figure element is the parent of the img and
+figcaption inside it, so those two are siblings. The audio element works
+the same way, it's the parent of its source tag and the fallback text
+next to it, and the video element does the same thing with its own
+source tag. In my Hyperlinks section, each p tag is also a parent, since
+it wraps one a tag inside it as its child. This shows how the DOM nests
+tags based on where they're placed in the HTML, so whatever tag wraps
+around another tag becomes its parent.
+-->
+
+</body>
+</html>
