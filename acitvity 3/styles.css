@@ -1,0 +1,183 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgb(45, 45, 60);
+  background-color: #eef1f8;
+}
+
+h1, h2 {
+  font-weight: bold;
+  color: navy;
+}
+
+h1 {
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #d5dbea;
+}
+
+/* adds an arrow before each h2 */
+h2::before {
+  content: "\25B8  ";
+  color: steelblue;
+}
+
+/* Both rules target the same paragraph (.intro).
+   .intro wins because a class is stronger than a plain p selector.
+   It wins even if p is written later. */
+.intro {
+  color: navy;
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+p {
+  color: dimgray;
+}
+
+/* ===== LAYOUT ===== */
+header {
+  text-align: center;
+  padding: 36px 0 24px;
+  background-color: navy;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  background-color: #dde3f2;
+}
+
+main {
+  padding: 30px 0 10px;
+}
+
+/* Total width of one .card is 500px.
+   border-box counts the padding and border inside the width,
+   so it stays 500px. */
+.card {
+  width: 500px;
+  padding: 20px;
+  border: 2px solid #c4cce0;
+  border-radius: 12px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 40, 0.08);
+}
+
+/* descendant selector: p inside .card */
+.card p {
+  margin-bottom: 8px;
+}
+
+/* different border so About stands out */
+#about {
+  border-color: steelblue;
+  border-width: 3px;
+  position: relative;
+}
+
+/* badge at the top-right corner */
+#about::after {
+  content: "Student";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(70, 130, 180, 0.9);
+  border-radius: 12px;
+}
+
+/* ===== COMPONENTS ===== */
+nav {
+  margin-top: 14px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 0 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: steelblue;
+  border-radius: 20px;
+  transition: background-color 0.2s;
+}
+
+/* color changes when you hover */
+nav a:hover {
+  background-color: #e8793a;
+}
+
+.skills-list {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+/* child selector: li directly inside .skills-list */
+.skills-list > li {
+  padding: 5px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: navy;
+  background-color: #e3e9f7;
+  border: 1px solid steelblue;
+  border-radius: 20px;
+}
+
+/* display: none removes the text and leaves no gap.
+   visibility: hidden hides the text but leaves an empty gap. */
+.hide-none {
+  display: none;
+}
+
+.hide-visibility {
+  visibility: hidden;
+}
+
+.scroll-box {
+  height: 120px;
+  overflow: auto;
+}
+
+/* ===== REFLECTION ANSWERS =====
+   1. .intro won because it is a class, and a class is stronger than
+      a plain p selector. Order only matters when both are equally strong.
+
+   2. With content-box: 500 + 40 (padding) + 4 (border) = 544px.
+
+   3. I use visibility: hidden when the space must stay so nothing
+      moves, like an error message that shows up later.
+*/
